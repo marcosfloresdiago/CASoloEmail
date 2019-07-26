@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+<meta charset="UTF-8">
+<title>Certificados email.</title>
+</head>
+<body>
+	<h1>Aplicacion para Emilio Seguro por certificado</h1>
+
+	<h2>Datos personales</h2>
+	
+<form action="#" th:action="@{/SeguridadInformatica/introducirDatosAutoInstalable}"
+                 th:object="${datos}" method="POST"  enctype="multipart/form-data">
+		<table>
+
+			<tr>
+				<th>Nombre:</th>
+				<td><input type="text" name="nombre" size="40" ></td>
+			</tr>
+			<tr>
+				<th>Apellidos:</th>
+				<td><input type="text" name="apellidos" size="40" ></td>
+			</tr>
+			<tr>
+				<th>Email:</th>
+				<td><input type="text" th:field="*{email}" size="40" ></td>
+			</tr>
+
+		</table>
+
+		<h2>Opciones para la llave privada</h2>
+
+		<table>
+			<tr>
+			
+				<th>Tamaño de la llave medio:1028b grande:2056b</th>
+				<td><keygen name="llaveGenerada" keytype="RSA" challenge="woofy">
+			</tr>
+
+		</table>
+
+		<input type="submit" value="Siguiente">
+	</form>
+</body>
+</html>

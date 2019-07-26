@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Certificados email.</title>
+</head>
+<body>
+	<h1>Aplicacion para Emilio Seguro por certificado</h1>
+
+	<h2>Datos personales</h2>
+
+	<form action="#" th:action="@{/SeguridadInformatica/introducirDatos}"
+		th:object="${datos}" method="POST">
+		<table>
+
+			<tr>
+				<th>Nombre:</th>
+				<td><input type="text" name="nombre" size="40" required></td>
+			</tr>
+			<tr>
+				<th>Apellidos:</th>
+				<td><input type="text" name="apellidos" size="40" required></td>
+			</tr>
+			<tr>
+				<th>Email:</th>
+				<td><input type="text" th:field="*{email}" size="40" required></td>
+			</tr>
+
+		</table>
+
+		<h2>Opciones para la llave privada</h2>
+
+		<table>
+			<tr>
+				<th>Tamaño de la llave(bits):</th>
+				<td><select name="tamanyo" required>
+
+						<option value="1024">Grado Medio(1024 bits)</option>
+						<option value="2048">Grado Alto(2048 bits)</option>
+
+				</select>
+			</tr>
+
+
+		</table>
+
+		<h2>Contraseña para el PKCS12:</h2>
+		<table>
+			<tr>
+				<th>Contraseña para proteger tu PKCS12:</th>
+				<td><input type="password" name="contrasenya" size="40"
+					required></td>
+			</tr>
+		</table>
+		<input type="submit" value="Siguiente">
+	</form>
+</body>
+</html>

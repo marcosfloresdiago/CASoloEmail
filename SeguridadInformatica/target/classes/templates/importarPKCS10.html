@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+<meta charset="UTF-8">
+<title>Certificados email.</title>
+</head>
+<body>
+	<h1>Aplicacion para Emilio Seguro por certificado</h1>
+
+	<h2>Datos personales</h2>
+	
+<form action="#" th:action="@{/SeguridadInformatica/importarPKCS10}" method="POST">
+
+	
+ <textarea name="texto" rows="20" cols="75">Pega el pkcs10 aquí</textarea>
+ <div>
+   <button>Submit</button>
+ </div>
+	</form>
+</body>
+</html>

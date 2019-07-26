@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Descargar Certificado</title>
+<meta charset="UTF-8"/>
+</head>
+<body>
+<h1> El certificado se descargará en /Descargas.</h1>
+<a th:href="@{/SeguridadInformatica/descargar/{clave}(clave=${objeto})}" >Descargar certificado</a>
+</body>
+</html>
